@@ -89,7 +89,8 @@ const Iletisim = () => {
       
       // Üretim ortamında farklı bir endpoint kullanabilirsiniz
       if (process.env.NODE_ENV === 'production') {
-        endpoint = '/api/contact'; // Göreceli yol - proxy yapılandırması için
+        // Render'daki backend servisinizin URL'ini buraya ekleyin
+        endpoint = 'https://mywebsitebe.onrender.com/api/contact'; // Backend URL'inizi buraya girin
       }
       
       const response = await fetch(endpoint, {
