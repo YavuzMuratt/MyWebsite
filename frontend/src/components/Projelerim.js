@@ -2,6 +2,8 @@ import React from 'react';
 import RDDImage from '../assets/RDD.png';
 import KresKayitImage from '../assets/KresKayit.png';
 import WikiArtImage from '../assets/WikiArt.png'
+import ChessDLImage from '../assets/chess.png'
+import PlaceHolderImage from '../assets/placeholder.jpg'
 import { useLanguage } from '../context/LanguageContext';
 import { Parallax } from 'react-parallax';
 
@@ -40,7 +42,7 @@ const content = {
         title: 'Industrial Supply Demand Application',
         description: 'İşletmelerin endüstriyel ürün taleplerini gönderebilmeleri ve üreticilerin talepleri karşılamalarının sağlandığı bir uygulama.',
         technologies: ['Flutter', 'Firebase'],
-        imageUrl: 'https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=Proje+4', // Placeholder image
+        imageUrl: PlaceHolderImage,
         githubUrl: 'https://github.com/YavuzMuratt/supply_app',
       },
       {
@@ -48,16 +50,16 @@ const content = {
         title: 'Fal Uygulaması',
         description: 'Kullanıcıların çeşitli fal oyunlarını oynayabilmeleri için bir uygulama.',
         technologies: ['Flutter', 'Firebase'],
-        imageUrl: 'https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Proje+5', // Placeholder image
+        imageUrl: PlaceHolderImage,
         githubUrl: 'https://github.com/YavuzMuratt',
       },
       {
         id: 6,
-        title: 'ChessDL',
+        title: 'LuminaChess',
         description: 'Deep Learning ile geliştirilmiş bir satranç motoru.',
-        technologies: ['Python', 'Pytorch'],
-        imageUrl: 'https://via.placeholder.com/400x250/6366F1/FFFFFF?text=Proje+6', // Placeholder image
-        githubUrl: 'https://github.com/YavuzMuratt/ChessDL',
+        technologies: ['Python', 'Pytorch', 'python-chess'],
+        imageUrl: ChessDLImage,
+        githubUrl: 'https://github.com/YavuzMuratt/LuminaChess',
       },
     ]
   },
@@ -94,7 +96,7 @@ const content = {
         title: 'Industrial Supply Demand Application',
         description: 'An application where businesses can send their industrial product demands and manufacturers can meet these demands.',
         technologies: ['Flutter', 'Firebase'],
-        imageUrl: 'https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=Project+4', // Placeholder image
+        imageUrl: PlaceHolderImage,
         githubUrl: 'https://github.com/YavuzMuratt/supply_app',
       },
       {
@@ -102,7 +104,7 @@ const content = {
         title: 'Fortune Telling App',
         description: 'An application for users to play various fortune telling games.',
         technologies: ['Flutter', 'Firebase'],
-        imageUrl: 'https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Project+5', // Placeholder image
+        imageUrl: PlaceHolderImage,
         githubUrl: 'https://github.com/YavuzMuratt',
       },
       {
@@ -110,8 +112,8 @@ const content = {
         title: 'ChessDL',
         description: 'A chess engine developed with Deep Learning.',
         technologies: ['Python', 'Pytorch'],
-        imageUrl: 'https://via.placeholder.com/400x250/6366F1/FFFFFF?text=Project+6', // Placeholder image
-        githubUrl: 'https://github.com/YavuzMuratt/ChessDL',
+        imageUrl: ChessDLImage,
+        githubUrl: 'https://github.com/YavuzMuratt/LuminaChess',
       },
     ]
   }
