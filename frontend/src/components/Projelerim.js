@@ -109,7 +109,7 @@ const content = {
       },
       {
         id: 6,
-        title: 'ChessDL',
+        title: 'LuminaChess',
         description: 'A chess engine developed with Deep Learning.',
         technologies: ['Python', 'Pytorch'],
         imageUrl: ChessDLImage,
