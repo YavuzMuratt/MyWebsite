@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   SiPython, SiFlutter, SiPytorch, SiNumpy, SiFlask, 
   SiDjango, SiJavascript, SiDocker, SiOpencv, SiHuggingface, 
-  SiGit, SiSqlite, SiFirebase 
+  SiGit, SiSqlite, SiFirebase, SiPypi 
 } from 'react-icons/si';
 import { FaJava, FaDownload } from 'react-icons/fa';
 import { HiCode, HiChip, HiGlobeAlt, HiServer, HiDatabase, HiClock } from 'react-icons/hi';
@@ -33,7 +33,8 @@ const content = {
     stats: {
       commits: 'Commits',
       projects: 'Projeler',
-      experience: 'Yıl Deneyim'
+      experience: 'Yıl Deneyim',
+      pypiDescription: 'Python için yazılan NMEA işleme paketi'
     }
   },
   en: {
@@ -53,7 +54,8 @@ const content = {
     stats: {
       commits: 'Commits',
       projects: 'Projects',
-      experience: 'Years Experience'
+      experience: 'Years Experience',
+      pypiDescription: 'NMEA processing package for Python'
     }
   }
 };
@@ -91,7 +93,8 @@ const categoryIcons = {
 const statIcons = {
   "commits": <VscGitCommit className="text-purple-400 text-4xl" />,
   "projects": <BsFileEarmarkCode className="text-purple-400 text-4xl" />,
-  "experience": <HiClock className="text-purple-400 text-4xl" />
+  "experience": <HiClock className="text-purple-400 text-4xl" />,
+  "pypi": <SiPypi className="text-purple-400 text-4xl" />
 };
 
 // İkon eşleştirmesi ve hover renkleri
@@ -117,7 +120,8 @@ const skillIcons = {
 const stats = {
   commits: "400+",
   projects: "20+",
-  experience: "2+"
+  experience: "2+",
+  pypi: "NMEA Parser"
 };
 
 // Particles konfigürasyonu
@@ -483,21 +487,44 @@ const Hakkimda = () => {
                   </div>
                 </div>
                 
-                {/* Deneyim kartı */}
-                <div 
-                  className="bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg flex-1 transition-transform duration-300 hover:shadow-xl hover:shadow-purple-900/20 transform hover:-translate-y-1"
-                  data-aos="fade-left"
-                  data-aos-delay="200"
-                >
-                  <div className="flex items-center h-full">
-                    <div className="mr-6 pl-2">
-                      {statIcons["experience"]}
-                    </div>
-                    <div className="text-right">
-                      <div className="text-4xl font-bold text-purple-400">{stats.experience}</div>
-                      <div className="text-gray-400">{t.stats.experience}</div>
+                {/* Deneyim ve PyPI Package kartları yan yana */}
+                <div className="grid grid-cols-2 gap-4">
+                  {/* Deneyim kartı */}
+                  <div 
+                    className="bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl hover:shadow-purple-900/20 transform hover:-translate-y-1"
+                    data-aos="fade-left"
+                    data-aos-delay="200"
+                  >
+                    <div className="flex items-center h-full">
+                      <div className="mr-4 pl-2">
+                        {statIcons["experience"]}
+                      </div>
+                      <div className="text-right">
+                        <div className="text-3xl font-bold text-purple-400">{stats.experience}</div>
+                        <div className="text-gray-400 text-sm">{t.stats.experience}</div>
+                      </div>
                     </div>
                   </div>
+
+                  {/* PyPI Package kartı */}
+                  <a 
+                    href="https://pypi.org/project/nmeaparsec/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl hover:shadow-purple-900/20 transform hover:-translate-y-1"
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+                  >
+                    <div className="flex items-center h-full">
+                      <div className="mr-4 pl-2">
+                        {statIcons["pypi"]}
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xl font-bold text-purple-400">{stats.pypi}</div>
+                        <div className="text-gray-400 text-xs mt-1">{t.stats.pypiDescription}</div>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
 
