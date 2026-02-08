@@ -2,8 +2,9 @@ import React from 'react';
 import RDDImage from '../assets/RDD.png';
 import KresKayitImage from '../assets/KresKayit.png';
 import WikiArtImage from '../assets/WikiArt.png'
-import ChessDLImage from '../assets/chess.png'
 import PlaceHolderImage from '../assets/placeholder.jpg'
+import GothStarlightImage from '../assets/GothStarlight.png'
+import SahalogImage from '../assets/Sahalog.png'
 import { useLanguage } from '../context/LanguageContext';
 import { Parallax } from 'react-parallax';
 
@@ -12,6 +13,7 @@ const content = {
   tr: {
     title: 'Projelerim',
     viewOnGithub: 'GitHub\'da Görüntüle',
+    noGithub: 'GitHub\'a yüklemek istemiyorum',
     projects: [
       {
         id: 1,
@@ -19,18 +21,34 @@ const content = {
         description: 'Yapay zeka ve görüntü işleme teknikleri ile yol yüzey deformasyonlarının tespiti, rapolaması ve haritalandırılması.',
         technologies: ['Python', 'Pytorch', 'OpenCV', 'YOLO', 'Flask', 'SQLite', 'Docker'],
         imageUrl: RDDImage,
-        githubUrl: '#', // GitHub linkinizi buraya ekleyin
+        githubUrl: '#',
       },
       {
         id: 2,
         title: 'Kreş Kayıt ve Atama Sistemi',
-        description: 'Atakum Belediyesi kreşleri için bir kayıt alma ve atama sistemi.',
+        description: 'Atakum Belediyesi kreşleri için kayıt alınan bir web sitesi ve alınan kayıtlardaki bilgiler/tercihlere göre atama yapılmasını sağlayan kontrol sistemi.',
         technologies: ['Python', 'Flask', 'SQLAlchemy', 'Docker'],
         imageUrl: KresKayitImage,
         githubUrl: 'https://github.com/YavuzMuratt/KresKayit',
       },
       {
         id: 3,
+        title: 'Sahalog - Halısaha Rezervasyon Sistemi',
+        description: 'Kullanıcıların konumlarına göre halı sahaları keşfedip rezervasyon yapabildiği, saha sahiplerinin sahalarını yönettiği full-stack mobil uygulama ve yönetim paneli.',
+        technologies: ['Flutter', 'FastAPI', 'PostgreSQL', 'React', 'TypeScript', 'Firebase', 'Google Maps API', 'JWT'],
+        imageUrl: SahalogImage,
+        githubUrl: '#',
+      },
+      {
+        id: 4,
+        title: 'Goth Starlight - Cascade Slot Oyunu',
+        description: 'Gothic anime temalı, 6x5 grid cascade/tumble mekanizmalı tarayıcı tabanlı slot oyunu. Pay Anywhere, multiplier semboller, free spins ve ayarlanabilir RTP ile tek oyunculu demo deneyim.',
+        technologies: ['TypeScript', 'Vite', 'Pixi.js', 'GSAP', 'HTML5'],
+        imageUrl: GothStarlightImage,
+        githubUrl: '#',
+      },
+      {
+        id: 5,
         title: 'WikiArt Classification App',
         description: 'WikiArt veri kümesi ile eğitilerek görsel sanat eserlerini ait oldukları türe göre sınıflandıran bir model.',
         technologies: ['Python', 'Pytorch', 'ResNet'],
@@ -38,34 +56,19 @@ const content = {
         githubUrl: 'https://github.com/YavuzMuratt/wikiart-classification-act',
       },
       {
-        id: 4,
+        id: 6,
         title: 'Industrial Supply Demand Application',
         description: 'İşletmelerin endüstriyel ürün taleplerini gönderebilmeleri ve üreticilerin talepleri karşılamalarının sağlandığı bir uygulama.',
         technologies: ['Flutter', 'Firebase'],
         imageUrl: PlaceHolderImage,
         githubUrl: 'https://github.com/YavuzMuratt/supply_app',
       },
-      {
-        id: 5,
-        title: 'Fal Uygulaması',
-        description: 'Kullanıcıların çeşitli fal oyunlarını oynayabilmeleri için bir uygulama.',
-        technologies: ['Flutter', 'Firebase'],
-        imageUrl: PlaceHolderImage,
-        githubUrl: 'https://github.com/YavuzMuratt',
-      },
-      {
-        id: 6,
-        title: 'LuminaChess',
-        description: 'Deep Learning ile geliştirilmiş bir satranç motoru.',
-        technologies: ['Python', 'Pytorch', 'python-chess'],
-        imageUrl: ChessDLImage,
-        githubUrl: 'https://github.com/YavuzMuratt/LuminaChess',
-      },
     ]
   },
   en: {
     title: 'My Projects',
     viewOnGithub: 'View on GitHub',
+    noGithub: 'Not uploaded to GitHub',
     projects: [
       {
         id: 1,
@@ -73,18 +76,34 @@ const content = {
         description: 'Detection, reporting and mapping of road surface deformations using artificial intelligence and image processing techniques.',
         technologies: ['Python', 'Pytorch', 'OpenCV', 'YOLO', 'Flask', 'SQLite', 'Docker'],
         imageUrl: RDDImage,
-        githubUrl: '#', 
+        githubUrl: '#',
       },
       {
         id: 2,
         title: 'Kindergarten Registration and Assignment System',
-        description: 'A registration and assignment system for Atakum Municipality kindergartens.',
+        description: 'A registration website for Atakum Municipality kindergartens and a control system that assigns placements based on registration data and preferences.',
         technologies: ['Python', 'Flask', 'SQLAlchemy', 'Docker'],
         imageUrl: KresKayitImage,
         githubUrl: 'https://github.com/YavuzMuratt/KresKayit',
       },
       {
         id: 3,
+        title: 'Sahalog - Indoor Football Pitch Booking System',
+        description: 'Full-stack mobile app and admin panel where users can discover and book pitches by location, and pitch owners can manage their venues.',
+        technologies: ['Flutter', 'FastAPI', 'PostgreSQL', 'React', 'TypeScript', 'Firebase', 'Google Maps API', 'JWT'],
+        imageUrl: SahalogImage,
+        githubUrl: '#',
+      },
+      {
+        id: 4,
+        title: 'Goth Starlight - Cascade Slot Game',
+        description: 'Gothic anime-themed, browser-based slot game with 6x5 grid cascade/tumble mechanics. Pay Anywhere, multiplier symbols, free spins and adjustable RTP for a single-player demo experience.',
+        technologies: ['TypeScript', 'Vite', 'Pixi.js', 'GSAP', 'HTML5'],
+        imageUrl: GothStarlightImage,
+        githubUrl: '#',
+      },
+      {
+        id: 5,
         title: 'WikiArt Classification App',
         description: 'A model trained with the WikiArt dataset to classify visual artworks according to their genre.',
         technologies: ['Python', 'Pytorch', 'ResNet'],
@@ -92,28 +111,12 @@ const content = {
         githubUrl: 'https://github.com/YavuzMuratt/wikiart-classification-act',
       },
       {
-        id: 4,
+        id: 6,
         title: 'Industrial Supply Demand Application',
         description: 'An application where businesses can send their industrial product demands and manufacturers can meet these demands.',
         technologies: ['Flutter', 'Firebase'],
         imageUrl: PlaceHolderImage,
         githubUrl: 'https://github.com/YavuzMuratt/supply_app',
-      },
-      {
-        id: 5,
-        title: 'Fortune Telling App',
-        description: 'An application for users to play various fortune telling games.',
-        technologies: ['Flutter', 'Firebase'],
-        imageUrl: PlaceHolderImage,
-        githubUrl: 'https://github.com/YavuzMuratt',
-      },
-      {
-        id: 6,
-        title: 'LuminaChess',
-        description: 'A chess engine developed with Deep Learning.',
-        technologies: ['Python', 'Pytorch'],
-        imageUrl: ChessDLImage,
-        githubUrl: 'https://github.com/YavuzMuratt/LuminaChess',
       },
     ]
   }
@@ -252,14 +255,20 @@ const Projelerim = () => {
                         </span>
                       ))}
                     </div>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-auto inline-block bg-purple-600 hover:bg-purple-700 text-white text-center font-bold py-2 px-4 rounded transition duration-300 github-button"
-                    >
-                      {t.viewOnGithub}
-                    </a>
+                    {project.githubUrl && project.githubUrl !== '#' ? (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-auto inline-block bg-purple-600 hover:bg-purple-700 text-white text-center font-bold py-2 px-4 rounded transition duration-300 github-button"
+                      >
+                        {t.viewOnGithub}
+                      </a>
+                    ) : (
+                      <span className="mt-auto inline-block bg-gray-600 text-gray-400 text-center font-bold py-2 px-4 rounded cursor-default github-button">
+                        {t.noGithub}
+                      </span>
+                    )}
                   </div>
                 </div>
               ))}
